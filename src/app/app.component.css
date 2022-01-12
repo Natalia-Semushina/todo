@@ -2,4 +2,42 @@
   padding-left: 5px;
 }
 
+.all-todos {
+  text-align: center;
+}
+
+.all-todos h1 {
+  margin-top: 1em;
+}
+
+.all-todos mat-card {
+  width: 80%;
+  margin: 1em auto;
+  text-align: left;
+}
+
+.todo-icon {
+  vertical-align: middle;
+  padding-bottom: 3px;
+  font-weight: 600;
+}
+
+.detail-label {
+  font-weight: 500;
+}
+
+.detail-options {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+}
+
+.detail-options mat-icon {
+  padding-right: 5px;
+}
+
+button:hover, .detail-options {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=app.component.css.map */

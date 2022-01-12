@@ -1,6 +1,42 @@
 <div class="toolbar-container">
   <mat-toolbar class="toolbar" color="primary">
-    <mat-icon aria-hidden="false" aria-label="check mark icon">fact_check</mat-icon>
+    <mat-icon aria-hidden="false" aria-label="check mark icon">flaky</mat-icon>
     <h1>TODO App</h1>
   </mat-toolbar>
+</div>
+<div class="all-todos">
+  <h1>All TODO</h1>
+  <div *ngFor="let todo of todos">
+    <mat-card>
+      <mat-card-title>
+        <mat-icon
+          class="todo-icon"
+          color="accent"
+          aria-hidden="false"
+          aria-label="circle check mark icon"
+        >check_circle_outline</mat-icon
+        >
+        {{ todo.name }}
+      </mat-card-title>
+      <div class="detail-options">
+        <mat-icon
+          class="todo-icon"
+          color="primary"
+        >edit</mat-icon
+        >
+        <mat-icon class="todo-icon" color="warn"
+        >remove_circle</mat-icon
+        >
+      </div>
+      <mat-card-content>
+        <p>
+          <span class="detail-label">Frequency:</span> {{ todo.frequency }}
+        </p>
+        <p>
+          <span class="detail-label">Why is this habit important to me?</span>
+          <br />{{ todo.description }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
